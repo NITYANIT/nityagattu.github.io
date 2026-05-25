@@ -1,0 +1,414 @@
+/* Education Page Specific Styles */
+
+.education-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.education-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.institution-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1.5px solid #9dcfe0;
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.institution-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(33, 147, 176, 0.3);
+}
+
+.institution-logo {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.institution-details {
+    flex-grow: 1;
+    padding: 0;
+    width: 100%;
+}
+
+.institution-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.institution-details p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.specialization {
+    color: #2193b0;
+    font-weight: 500;
+}
+
+.experience-timeline {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    font-size: 1.15rem;
+    color: #2193b0;
+    font-weight: 600;
+    background: var(--card-bg);
+    padding: 10px 28px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(33,147,176,0.07);
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    text-align: center;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 2;
+}
+
+.grade-range {
+    color: #27ae60;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .institution-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .institution-logo {
+        width: 120px;
+    }
+    .experience-timeline {
+        position: static;
+        margin-left: auto;
+        margin-top: 0.5rem;
+        min-width: 0;
+        max-width: 100%;
+        display: block;
+    }
+}
+
+/* Removed prefers-color-scheme media queries - using class-based dark theme instead */
+
+/* Interests Section */
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.interest-item {
+    display: inline-block;
+}
+
+.interest-tag {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.interest-tag:hover {
+    transform: scale(1.05);
+}
+
+/* Achievements Section */
+.achievements-section {
+    margin-top: 4rem;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.achievement-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1.5px solid #9dcfe0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: rgba(33, 147, 176, 0.3);
+}
+
+.achievement-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2193b0;
+}
+
+.achievement-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .education-container {
+        padding: 1rem;
+    }
+    
+    .institution-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .institution-logo {
+        width: 120px;
+        max-height: 120px;
+        margin: 0 auto;
+    }
+
+    .institution-details h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .institution-details p {
+        font-size: 1rem;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .achievement-card {
+        padding: 1.2rem;
+    }
+    
+    .interests-grid {
+        gap: 0.8rem;
+        justify-content: center;
+    }
+    
+    .interest-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .institution-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .institution-logo {
+        width: 100px;
+        max-height: 100px;
+    }
+    
+    .institution-details h2 {
+        font-size: 1.2rem;
+    }
+    
+    .institution-details p {
+        font-size: 0.95rem;
+    }
+    
+    .achievement-card {
+        padding: 1rem;
+    }
+    
+    .achievement-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .achievement-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Dark Theme Styles */
+.dark-theme .institution-card {
+    background: var(--card-bg-dark);
+    backdrop-filter: blur(6px);
+    border-color: rgba(116, 185, 255, 0.06);
+}
+
+.dark-theme .institution-details h2 {
+    color: #e2e2e2;
+}
+
+.dark-theme .institution-details p {
+    color: #e2e2e2;
+}
+
+.dark-theme .degree-type {
+    background: rgba(116, 185, 255, 0.2);
+    color: #74b9ff;
+}
+
+.dark-theme .grade-range {
+    color: #6dd5ed;
+}
+
+.dark-theme .achievement-card {
+    background: var(--card-bg-dark);
+    border-color: rgba(255, 255, 255, 0.04);
+}
+
+.dark-theme .achievement-card h3 {
+    color: #74b9ff;
+}
+
+.dark-theme .achievement-card p {
+    color: #b0b0b0;
+}
+
+.dark-theme .experience-timeline {
+    background: rgba(255,255,255,0.03);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Expandable Details Section */
+.details-toggle {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    color: #74b9ff;
+    border: 2px solid #74b9ff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(116, 185, 255, 0.15);
+}
+
+.details-toggle:hover {
+    background: linear-gradient(135deg, #74b9ff, #00b894);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(116, 185, 255, 0.3);
+}
+
+.dark-theme .details-toggle {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    color: #90caf9;
+    border-color: #90caf9;
+}
+
+.dark-theme .details-toggle:hover {
+    background: linear-gradient(135deg, #90caf9, #00b894);
+    color: white;
+    border-color: transparent;
+}
+
+.expanded-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 0;
+}
+
+.expanded-details.show {
+    max-height: 2000px;
+    margin-top: 1.5rem;
+    transition: max-height 0.7s ease-in;
+}
+
+.detail-section {
+    background: rgba(33, 147, 176, 0.05);
+    border-left: 4px solid #2193b0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.dark-theme .detail-section {
+    background: rgba(116, 185, 255, 0.1);
+    border-left-color: #74b9ff;
+}
+
+.detail-section h3 {
+    color: #2193b0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.dark-theme .detail-section h3 {
+    color: #74b9ff;
+}
+
+.detail-section p {
+    line-height: 1.8;
+    color: #34495e;
+}
+
+.dark-theme .detail-section p {
+    color: #e2e2e2;
+}
+
+.course-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.course-list li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(33, 147, 176, 0.1);
+    line-height: 1.8;
+}
+
+.dark-theme .course-list li {
+    border-bottom-color: rgba(116, 185, 255, 0.1);
+}
+
+.course-list li:last-child {
+    border-bottom: none;
+}
+
+.course-list strong {
+    color: #2193b0;
+    font-weight: 600;
+}
+
+.dark-theme .course-list strong {
+    color: #74b9ff;
+}

@@ -1,0 +1,145 @@
+/* Contact Page Styles */
+
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.contact-container h1 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    min-height: 200px;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.15);
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1.5rem;
+    }
+    
+    .contact-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 400px;
+    }
+    
+    .contact-item {
+        padding: 1.5rem 1rem;
+        min-height: 160px;
+    }
+    
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 1rem;
+    }
+    
+    .contact-container h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-grid {
+        gap: 1rem;
+        max-width: 320px;
+    }
+    
+    .contact-item {
+        padding: 1rem 0.5rem;
+        min-height: 140px;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-item p {
+        font-size: 1rem;
+    }
+}
+
+/* Dark theme specific adjustments */
+.dark-theme .contact-item {
+    background: var(--card-bg-dark);
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    border: 1px solid rgba(116, 185, 255, 0.06);
+    color: var(--text-color);
+}
+
+body.dark-theme .contact-item:hover {
+    color: var(--primary-color);
+    background: rgba(255,255,255,0.03);
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
